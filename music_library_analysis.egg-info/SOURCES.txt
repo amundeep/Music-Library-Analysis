@@ -1,9 +1,9 @@
 README.md
 setup.py
 music_library_analysis/__init__.py
+music_library_analysis/mla.py
 music_library_analysis.egg-info/PKG-INFO
 music_library_analysis.egg-info/SOURCES.txt
 music_library_analysis.egg-info/dependency_links.txt
+music_library_analysis.egg-info/requires.txt
 music_library_analysis.egg-info/top_level.txt
-music_library_analysis/metadata/GetSongMetadata.py
-music_library_analysis/model/Song.py
