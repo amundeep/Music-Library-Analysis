@@ -7,9 +7,13 @@ authors = ["Amundeep Singh <amundeep@gmail.com>"]
 [tool.poetry.dependencies]
 python = "^3.7"
 docopt = "^0.6.2"
+eyed3 = "^0.9.5"
+schema = "^0.7.2"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
+flake8 = "^3.7.9"
+black = {version = "^19.10b0", allow-prereleases = true}
 
 [build-system]
 requires = ["poetry>=0.12"]
