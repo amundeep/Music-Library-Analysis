@@ -18,16 +18,20 @@ import eyed3
 from docopt import docopt
 from schema import Schema, And, Or, Use, SchemaError
 
+def get_song_metadata(audiofile):
+    audiofile = eyed3.load(str(audiofile))
+    print(audiofile.tag)
+
 def main():
     docopt_args = docopt(__doc__)
     """ main-entry point for program, expects dict with arguments from docopt() """
 
-    # print(docopt_args)
+    print(docopt_args)
 
     schema = Schema({
         '--help': False,
         '--info': True,
-        'FILE': Use(open, error='FILE should be readable')})
+        'FILE': os.path.exists})
 
     # Validate the docopt schema
     try:
@@ -36,6 +40,8 @@ def main():
         exit(e)
 
     if (docopt_args.get('--info') == True):
+        audiofile = docopt_args.get('FILE')
+        get_song_metadata(audiofile)
         print("You did --info")
 
 if __name__ == "__main__":
