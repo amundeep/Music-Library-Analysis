@@ -20,11 +20,11 @@ from schema import Schema, And, Or, Use, SchemaError
 
 def get_song_metadata(audiofile):
     audiofile = eyed3.load(str(audiofile))
-    print(audiofile.tag)
+    audiofile.initTag()
+    print(audiofile.tag.file_info.name)
 
 def main():
     docopt_args = docopt(__doc__)
-    """ main-entry point for program, expects dict with arguments from docopt() """
 
     print(docopt_args)
 
